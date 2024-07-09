@@ -16,10 +16,10 @@ console.log(null >= 0) //The reason is that an equality check==and comaparisons 
 
 console.log(undefined > 0)
 console.log(undefined == 0)
-console.log(undefined >= 0) 
+console.log(undefined >= 0)
 
 
 //===
 
-console.log("2"===2)
-console.log(2===2)
+console.log("2" === 2)
+console.log(2 === 2)
