@@ -1,3 +1,5 @@
+//Functions
+
 function sayName() {
     console.log("H");
     console.log("E");

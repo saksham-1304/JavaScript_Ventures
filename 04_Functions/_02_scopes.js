@@ -1,3 +1,4 @@
+//Scopes
 
 let a = 100000000000
 const b = 20
