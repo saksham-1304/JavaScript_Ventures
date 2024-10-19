@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .button {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  </style>
+  <body>
+    <h1>Chai aur Javascript</h1>
+    <div class="button">
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+    </div>
+  </body>
+
+  <script>
+    const start = document.getElementById("start");
+    const stop = document.getElementById("stop");
+    stop.disabled = true;
+    let fun;
+    function p() {
+      let a = Math.round(Math.random() * 255);
+      let b = Math.round(Math.random() * 255);
+      let c = Math.round(Math.random() * 255);
+      return `rgb(${a},${b},${c})`;
+    }
+    start.addEventListener("click", () => {
+      fun = setInterval(() => {
+        document.body.style.backgroundColor = p();
+        start.style.backgroundColor = p();
+        stop.style.backgroundColor = p();
+      }, 1000);
+      stop.disabled = false;
+      start.disabled = true;
+    });
+    stop.addEventListener("click", () => {
+      clearInterval(fun);
+      fun=null;
+      stop.disabled = true;
+      start.disabled = false;
+    });
+  </script>
+</html>
